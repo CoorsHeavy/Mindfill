@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_edit"
+            android:title="Edit Tiles" />
+        <item
+            android:id="@+id/nav_quiz"
+            android:title="Retake Quiz" />
+        <item
+            android:id="@+id/nav_notify"
+            android:title="Toggle Notifications" />
+        <item
+            android:id="@+id/nav_chart"
+            android:title="Mood Chart" />
+    </group>
+
+</menu>

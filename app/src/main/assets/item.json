@@ -1,0 +1,238 @@
+{
+  "array": [
+    {"name": "Fish Oil",
+      "index": 0,
+      "Description": "Fish oil is oil derived from the tissues of oily fish. They contain the omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). 1000mg fish oil tablets daily have been associated with improved mood.",
+      "Sources": [
+        "Frasure-Smith N, Lespérance F, Julien P. Major depression is associated with lower omega-3 fatty acid levels in patients with recent acute coronary syndromes. Biol Psychiatry 2004 May 1;55(9):891-6.",
+        "Rees A, Austin M, Owen C, Parker G. Omega-3 deficiency associated with perinatal depression: Case control study. Psychiatry Research 2009 April 30;166(2-3):254-59.",
+        "Lucas M, Asselin G, Mérette C, et. al. Ethyl-eicosapentaenoic acid for the treatment of psychological distress and depressive symptoms in middle-aged women: a double-blind, placebo-controlled, randomized clinical trial. Am J Clin Nutr 2009 Feb;89(2):641-51. Epub 2008 Dec 30. ",
+        "Jazayeri S, Tehrani-Doost M, Keshavarz SA, et. al. Comparison of therapeutic effects of omega-3 fatty acid eicosapentaenoic acid and fluoxetine, separately and in combination, in major depressive disorde . Aust N Z J Psychiatry 2008;42(3):192-8.",
+        "Mischoulon D. Update and critique of natural remedies as antidepressant treatments. Psychiatr Clin North Am 2007; 30:51-68."
+      ]
+    }
+  ,
+    {"name": "Exercise",
+      "index": 1,
+      "Description": "When you exercise, your body releases chemicals called endorphins. These endorphins interact with the receptors in your brain that reduce your perception of pain. Endorphins also trigger a positive feeling in the body, similar to that of morphine.",
+      "Sources": ["Weyerer S. Physical inactivity and depression in the community. Evidence from the Upper Bavarian Field Study. Int J Sports Med 1992;13(6):492-6.",
+        "Dunn AL, Trivedi MH, O’Neal HA. Physical Activity dose-response effects on outcomes of depression and anxiety. Med Sci Sports Exerc 2001;33(6 Suppl):S587-97.",
+        "Babyak M, Blumenthal JA, Herman S, et. al. Exercise treatment for major depression: maintenance of therapeutic benefit at 10 months. Psychosom Med 2000;62(5):633-8.",
+        "Mather AS, Rodriguez C, Guthrie MF, et. al. Effects of exercise on depressive symptoms in older adults with poorly responsive depressive disorder: randomized controlled trial. Br J Psychiatry 2002;180:411-5.",
+        "Dimeo F, Bauer M, Varahram I, et. al. Benefits from aerobic exercise in patients with major depression: a pilot study. Br J Sports Med 2001;35(2):114-7.",
+        "Hyde JS, Mezulis AH, Abramson LY. The ABCs of depression: integrating affective, biological, and cognitive models to explain the emergence of the gender difference in depression. Psychol Rev 2008;115(2):291-313.",
+        "Knubben K, Reischies FM, Adli M, et. al. A randomised, controlled study on the effects of a short-term endurance training program in patients with major depression. Br J Sports Med 2007;41(1):29-33.",
+        "Knobf MT, Musanti R, Dorward J. Exercise and quality of life outcomes in patients with cancer. Semin Oncol Nurs 2007;23(4):285-96.",
+        "North TC, McCullagh P, Tran ZV. Effect of exercise on depression.Exerc Sport Sci Rev 1990;18:379-415.",
+        "Yeung RR. The acute effects of exercise on mood state.J Psychosom Res 1996;40(2):123-41. ",
+        "Craft LL, Perna FM. The Benefits of Exercise for the Clinically Depressed. Prim Care Companion J Clin Psychiatry 2004;6(3):104-111."]
+    }
+  ,
+    {"name": "Bright Light Therapy",
+      "index": 2,
+      "Description": "Light therapy is thought to affect brain chemicals linked to mood and sleep. Using a light therapy box may also help with other types of depression, sleep disorders and other conditions. During light therapy, you sit or work near a device called a light therapy box. The box gives off bright light that mimics natural outdoor light.",
+      "Sources": ["Benedetti F, Barbini B, Fulgosi MC, et. al. Combined total sleep deprivation and light therapy in the treatment of drug-resistant bipolar depression: acute response and long-term remission rates. J Clin Psychiatry 2005;66(12):1535-40.",
+        "Kemper KJ, Shannon S. Complementary and alternative medicine therapies to promote healthy moods. Pediatr Clin North Am 2007;54(6):901-26.",
+        "Jorm AF, Allen NB, O’Donnell CP, et. al. Effectiveness of complementary and self-help treatments for depression in children and adolescents. MJA 2006;185:368-372.",
+        "Fritzsche M, Heller R, Hill H, et. al. Sleep deprivation as a predictor of response to light therapy in major depression. J Affect Disord 2001;62(3):207-15.",
+        "Loving RT, Kripke DF, Shuchter SR. Bright light augments antidepressant effects of medication and wake therapy. Depress Anxiety 2002;16(1):1-3.",
+        "Aan Het Rot, M., D. S. Moskowitz, and S. N Young. “Exposure to bright light is associated with positive social interaction and good mood over short time periods: A naturalistic study in mildly seasonal people.” Journal of Psychiatric Research, 42 (2008): 311–319."]
+    }
+  ,
+    {"name": "Sleep",
+      "index": 3,
+      "Description": "Sleep deficiency has been linked to depression, suicide, and risk-taking behavior. 8-10 hours of consistent, REM sleep per night has been associated with improved mood.",
+      "Sources": ["Riemann D. Insomnia and comorbid psychiatric disorders. Sleep Med 2007;8(Suppl 4):S15-S20.",
+        "Morawetz D: Insomnia and Depression: Which Comes First? Sleep Research Online 2003;5(2): 77-81.",
+        "Hiscock H, Wake M. Infant sleep problems and postnatal depression: a community-based study. Pediatrics 2001;107(6):1317-22.",
+        "Hiscock H, Wake M. Randomised controlled trial of behavioural infant sleep intervention to improve infant sleep and maternal mood. BMJ 2002;324(7345):1062-5.",
+        "Wojnar M, Ilgen MA, Wojnar J, et. al. Sleep problems and suicidality in the National Comorbidity Survey Replication. J Psychiatr Res 2009 Feb;43(5):526-31. Epub 2008 Sep 7.",
+        "Hiscock H, Bayer JK, Hampton A, et. al. Long-term mother and child mental health effects of a population-based infant sleep intervention: cluster-randomized, controlled trial. Pediatrics 2008;122(3):e621-7."]
+    }
+  ,
+    {"name": "Anti-ruminative activities",
+      "index": 4,
+      "Description": "Anti-rumination, the act of preventing the dwelling on negative thoughts when it occurs, improves mood. It is important to recognize the presence of negative rumination and to cease doing it. We recommend calling a friend, journaling your thoughts or engaging in some sort of pleasurable activity whenever you feel like thinking negative thoughts.",
+      "Sources": ["Speca M, Carlson LE, Goodey E, et. al. A randomized, wait-list controlled clinical trial: the effect of a mindfulness meditation-based stress reduction program on mood and symptoms of stress in cancer outpatients. Psychosom Med 2000;62(5):613-22.",
+        "Carlson LE, Speca M, Faris P, et. al. One year pre-post intervention follow-up of psychological, immune, endocrine and blood pressure outcomes of mindfulness-based stress reduction (MBSR) in breast and prostate cancer outpatients. Brain Behav Immun 2007;21(8):1038-49."]
+    }
+  ,
+    {"name": "Meditation",
+      "index": 5,
+      "Description": "Mindfulness meditation is practiced sitting with eyes closed, cross-legged on a cushion, or on a chair, with the back straight. Attention is put on the movement of the abdomen when breathing in and out, or on the awareness of the breath as it goes in and out the nostrils.",
+      "Sources": ["Speca M, Carlson LE, Goodey E, et. al. A randomized, wait-list controlled clinical trial: the effect of a mindfulness meditation-based stress reduction program on mood and symptoms of stress in cancer outpatients. Psychosom Med 2000;62(5):613-22.",
+        "Carlson LE, Speca M, Faris P, et. al. One year pre-post intervention follow-up of psychological, immune, endocrine and blood pressure outcomes of mindfulness-based stress reduction (MBSR) in breast and prostate cancer outpatients. Brain Behav Immun 2007;21(8):1038-49."]
+    }
+  ,
+    {"name": "Social Connection",
+      "index": 6,
+      "Description": "Social connection strengthens our immune system, helps us recover from disease faster, and may even lengthen our life. People who feel more connected to others have lower rates of anxiety and depression. Moreover, studies show they also have higher self-esteem, are more empathic to others, and are more trusting and cooperative.",
+      "Sources": [""]
+    }
+  ,
+    {"name": "Calcium and Magnesium",
+      "index": 7,
+      "Description": "Calcium deficiency has been linked with anxiety and depression. 1000mg dietary calcium daily has been associated with improved mood. \nMagnesium ions regulate calcium ion flow in neurons, helping to regulate neuronal nitric oxide production. In magnesium deficiency, neuronal requirements for magnesium may not be met, causing neuronal damage which could manifest as depression. These magnesium ion neuronal deficits may be induced by stress hormones, excessive dietary calcium as well as dietary deficiencies of magnesium. 125-300mg magnesium per meal daily has been associated with improved mood.",
+      "Sources": ["Siwek M, Wróbel A, Dudek D, et. al. The role of copper and magnesium in the pathogenesis and treatment of affective disorders. Psych Pol 2005;39(5):911-20.",
+        "Linder J, Brismar K, Beck-Friis J, et. al. Calcium and magnesium concentrations in affective disorder: difference between plasma and serum in relation to symptoms. Acta Psychiatr Scand 1989;80(6):527-37. ",
+        "Rasmussen HH, Mortensen PB, Jensen IW. Depression and magnesium deficiency. Int J Psychiatry Med 1989;19(1):57-63.",
+        "Widmer J, Henrotte JG, Raffin Y, et. al. Relationship between erythrocyte magnesium, plasma electrolytes and cortisol, and intensity of symptoms in major depressed patients. J Affect Disord 1995;34(3):201-9.",
+        "Neher E, Sakaba T. Multiple roles of calcium ions in the regulation of neurotransmitter release. Neuron 2008;59(6):861-72.",
+        "Thys-Jacobs S. Micronutrients and the premenstrual syndrome: the case for calcium. J Am Coll Nutr 2000;19(2):220-7."]
+    }
+  ,
+    {"name": "Vitamin D3",
+      "index": 8,
+      "Description": "Depression in seasonal affect disorder (SAD) may be due to changing levels of vitamin D3, the hormone of sunlight, leading to changes in brain serotonin. 800 IU Vitamin D3 daily has been associated with improved mood.",
+      "Sources": ["Lansdowne AT, Provost SC. Vitamin D3 enhances mood in healthy subjects during winter. Psychopharmacology (Berl) 1998;135(4):319-23.",
+        "Gloth FM III, Allam W, Hollis B. Vitamin D vs broad spectrum phototherapy in treatment of seasonal affective disorder. J Nutr Health Ageing 1999;3(1):5-7.",
+        "Murphy PK, Wagner CL. Vitamin D and mood disorders among women: an integrative review. J Midwifery Womens Health 2008;53(5):440-6.",
+        "Hoogendijk WJ, Lips P, Dikmg, et. al. Depression is associated with decreased 25-hydroxyvitamin D and increased parathyroid hormone levels in older adults. Arch Gen Psychiatry 2008;65(5):508-12.",
+        "Wilkins CH, et. al. Vitamin D deficiency is associated with low mood and worse cognition in older adults. Am J Geriatr Psychiatry 2006;14:1032-40.",
+        "Berk M, Jacka FN, Williams LJ, et. al. Is this D vitamin to worry about? Vitamin D insufficiency in an inpatient sample. ANZJ Psych 2008;42(10):874-8.",
+        "Jorde R, Sneve M, Figenschau Y, et. al. Effects of vitamin D supplementation on symptoms of depression in overweight and obese subjects: randomized double-blind trial. J Intern Med 2008 Dec;264(6):599-609."]
+    }
+  ,
+    {"name": "Folate",
+      "index": 9,
+      "Description": "Low folate has leads to low serotonin, the “mood” chemical. 0.8mg folate tablets daily has been associated with improved mood.",
+      "Sources": ["Taylor MJ, Carney SM, Goodwin GM, et. al. Folate for depressive disorders: systematic review and meta-analysis of randomised controlled trials. J Psychopharmacol 2004;18(2):251-6.",
+        "Taylor MJ, Carney S, Geddes J, et. al. Folate for depressive disorders. Cochrane Database Syst Rev 2003;(2):CD003390.",
+        "Herrmann W, Lorenzl S, Obeid R. Review of the role of hyperhomocysteinemia and B-vitamin deficiency in neurological and psychiatric disorders--current evidence and preliminary recommendations Fortschr Neurol Psychiatr 2007;75(9):515-27.",
+        "Bottiglieri T, Laundy M, Crellin R, et. al. Homocysteine, folate, methylation, and monoamine metabolism in depression. J Neurol Neurosurg Psych 2000;69(2):228-32.",
+        "Morris MS, Fava M, Jacques PF, et. al. Depression and folate status in the US Population. Psychother Psychosom 2003;72(2):80-7.",
+        "Abou-Saleh MT, Coppen A. Folic acid and the treatment of depression. J Psychosom Res 2006 Sep;61(3):285-7.",
+        "Coppen A, Bolander-Gouaille C. Treatment of depression: time to consider folic acid and vitamin B12. J Psychopharmacol 2005 Jan;19(1):59-65.",
+        "Coppen A, Bailey J. Enhancement of the antidepressant action of fluoxetine by folic acid: a randomised, placebo-controlled trial. J Affect Disord 2000;60(2):121-30. ",
+        "Obeid R, McCaddon A, Herrmann W. The role of hyperhomocysteinemia and B-vitamin deficiency in neurological and psychiatric diseases. Clin Chem Lab Med 2007;45(12):1590-606.",
+        "Hintikka J, Tolmunen T, Tanskanen A, et. al. High vitamin B12 level and good treatment outcome may be associated in major depressive disorder. BMC Psychiatry 2003;3:17-22.",
+        "Bell IR, Edman JS, Morrow FD, et. al. Brief communication. Vitamin B1, B2, and B6 augmentation of tricyclic antidepressant treatment in geriatric depression with cognitive dysfunction. J Am Coll Nutr 1992;11(2):159-63."]
+    }
+  ,
+    {"name": "Methylation factors: B Vitamins (B6 and B12)",
+      "index": 10,
+      "Description": "Low levels of B-vitamins (6 & 12) may be linked to depression. One Vitamin B Complex tablet daily may improve mood. A vitamin B complex supplement typically contains riboflavin, pantothenic acid, folic acid, niacin, biotin, thiamin, vitamin B-6 and vitamin B-12.",
+      "Sources": [""]
+    }
+  ,
+    {"name": "St. John’s Wort",
+      "index": 11,
+      "Description": "St. John’s Wart is a medicinal herb derived from a wild plant. The remedy may take up to four weeks to exert an effect. Up to 900 mg of St John's Wort per day may reduce symptoms of depression.",
+      "Sources": ["Schule C, Baghai T, Ferrera A, et. al. Neuroendocrine effects of Hypericum extract WS 5570 in 12 healthy male volunteers. Pharmacopsychiatry 2001;34:S127-33.",
+        "Linde K, Berner MM, Kriston L. St. John’s wort for major depression. Cochrane Database of Systematic Reviews 2008, Issue 4. Art. No.: CD000448. doi:10.1002/14651858.CD000448.pub3.",
+        "Ernst E. Herbal remedies for depression and anxiety. Adv Psychiatr Treat 2007;13:312-316.",
+        "Roder C, Schaefer M, Leucht S. Meta-analysis of effectiveness and tolerability of treatment of mild to moderate depression with St. John’s wort. Fortschr Neurol Psychiatr 2004;72:330-343.",
+        "Linde K, Ramirez G, Mulrow CD, et. al. St. John’s wort for depression--an overview and meta-analysis of randomised clinical trials. BMJ 1996;313:253-58. ",
+        "Linde K, Mulrow CD. St John’s wort for depression. Cochrane Database Syst Rev. 2000;(2):CD000448.",
+        "Schrader E. Equivalence of St John’s wort extract (Ze 117) and fluoxetine: a randomised, 	controlled study in mild-moderate depression. Int Clin Psychopharmacol 2000;15(2):61-	8.",
+        "Rahimi R, Nikfar S, Abdollahi M. Efficacy and tolerability of Hypericum perforatum in 	major depressive disorder in comparison with selective serotonin reuptake inhibitors: A 	meta-analysis. Prog Neuropsychopharmacol Biol Psychiatry 2008 Nov 12.",
+        "Kasper S, Anghelescu IG, Szegedi A, et. al. Superior efficacy of St John’s Wort extract 	WS 5570 compared to placebo in patients with major depression: a randomized, double-	blind, placebo-controlled, multi-center trial. [ISRCTN77277298]. BMC Med 2006;4:14.",
+        "Szegedi A, Kohnen R, Dienel A, et. al. Acute treatment of moderate to severe depression 	with Hypericum extract WS 5570 (St John’s wort): randomised controlled double-blind 	non-inferiority trial versus paroxetine. BMJ 2005;330(7490):503.",
+        "Markowitz JS, Donovan JL, DeVane CL, et. al. Effect of St John’s wort on drug 	metabolism by induction of cytochrome P450 3A4 enzyme. JAMA 2003;290(11):1500-4.",
+        "Schulz V. Incidence and clinical relevance of the interactions and side-effects of Hypericum preparations. Phytomedicine 2001;8:152-60"]
+    }
+  ,
+    {"name": "SAMe (S-adenosyl-L-methionine)",
+      "index": 12,
+      "Description": "Rhodiola rosea is a scandinavian herb touted to promote physical/cognitive vitality. Over 300 human studies on Rhodiola rosea show that the plant has anti-stress, anti-anxiety, and anti-depressant properties, and that taking the extract of the root produces no significant negative effects. Typically users report enhanced energy, improved mood, greatly reduced stress, better sleep, and improved sexual vitality.",
+      "Sources": ["Nguyen M, Gregan A. S-adenosylmethionine and depression. Aust Fam Physician 2002;31(4):339-43.",
+        "Bressa GM. S-adenosyl-l-methionine (SAMe) as antidepressant: meta-analysis of clinical studies. Acta Neurol Scand Suppl 1994;154:7-14.",
+        "Alpert JE, Papakostas G, Mischoulon D, et. al. S-adenosyl-L-methionine (SAMe) as an adjunct for resistant major depressive disorder: an open trial following partial or nonresponse to selective serotonin reuptake inhibitors or venlafaxine. J Clin Psychopharmacol 2004;24(6):661-4"
+      ]
+    }
+  ,
+    {"name": "Rhodiola rosea",
+      "index": 13,
+      "Description": "Rhodiola rosea is a scandinavian herb touted to promote physical/cognitive vitality. Over 300 human studies on Rhodiola rosea show that the plant has anti-stress, anti-anxiety, and anti-depressant properties, and that taking the extract of the root produces no significant negative effects. Typically users report enhanced energy, improved mood, greatly reduced stress, better sleep, and improved sexual vitality.",
+      "Sources": ["Darbinyan V, Aslanyan G, Amroyan E, et. al. Clinical trial of Rhodiola rosea L. extract SHR-5 in the treatment of mild to moderate depression. Nord J Psychiatry 2007;61(5):343-8."]
+    }
+  ,
+    {"name": "Acupuncture",
+      "index": 14,
+      "Description": "Acupuncture is a a key component of traditional Chinese medicine involving thin needles inserted into the body at acupuncture points. Studies around the globe have suggested that treating depression with acupuncture has a positive and holistic effect on depressed patients, particularly when used in combination with psychotherapy and herbal treatments.",
+      "Sources": ["Leo RJ, Ligot A. A systematic review of randomized controlled trials of acupuncture in the treatment of depression. J Affect Dis 2007;97:13-22.",
+        "Duan DM, Tu Y, Chen LP. Assessment of effectiveness of electroacupuncture and fluoxetine for treatment of depression with physical symptoms. Zhongguo Zhen Jiu 2008;28(3):167-70.",
+        "Sun H, Zhao H, Ma C, et. al. Effects of electroacupuncture on depression and the production of glial cell line-derived neurotrophic factor compared with fluoxetine: a randomized controlled pilot study. J Altern Complement Med. 2013 Sep;19(9):733-9."]
+    }
+  ,
+    {"name": "Touch (Massage Therapy)",
+      "index": 15,
+      "Description": "Massage means rubbing and stretching muscle. This relieves tension in muscles, increases blood flow, and promotes relaxation. Massage softens rigid muscle and connective tissue that can be painful, limit movement, or cause inflammation. For those with depression, massage can alleviate sluggishness, back pain, joint pain, and muscle aches. It can also help with fatigue and sleeping problems.",
+      "Sources": [
+        "Field T, Griszle N, Scafidi F, et. al. Massage and relaxation therapies’ effects on depressed adolescent mothers. Adolescence 1996 Winter;31(124):903-11.",
+        "Field T, Diego MA, Hernandez-Reif M, et. al. Massage therapy effects on depressed pregnant women. J Psychosom Obstet Gynaecol 2004 Jun;25(2):115-22"]
+    }
+  ,
+    {"name": "Zinc",
+      "index": 16,
+      "Description": "300 or more enzymes in our bodies use zinc as a buddy to help them do their thing, making DNA, protein synthesis, cell division, all hugely important stuff. Zinc is also critical to cell signaling. The highest amount of zinc in the body is found in our brains. Zinc deficiency can lead to symptoms of depression, ADHD, difficulties with learning and memory, seizures, aggression, and violence. One 25mg zinc tablet daily has been associated with improved mood.",
+      "Sources": ["Nowak G, Szewczyk B, Pilc A. Zinc and depression. An update. Pharmacol Rep 2005;57(6):713-8.",
+        "Maes M, Vandoolaeghe E, Neels H, et. al. Lower serum zinc in major depression in a sensitive marker of treatment resistance and of the immune/inflammatory response in that illness. Biol Psychiatry 1997;42(5):349-58.",
+        "Maes M, D’Haese PC, Scharpé S, et. al. Hypozincemia in depression. J Affect Disord 1994;31(2):135-40.",
+        "McLoughlin IJ, Hodge JS. Zinc in depressive disorder. Acta Psychiatr Scand 1990;82(6):451-3.",
+        "Broun ER, Greist A, Tricot G, et. al. Excessive zinc ingestion. A reversible cause of sideroblastic anemia and bone marrow depression. JAMA 1990;264(11):1441-3"]
+    }
+  ,
+    {"name": "Saffron",
+      "index": 17,
+      "Description": "Saffron is a spice derived from the flower of Crocus sativus. Findings from clinical trials conducted to date indicate that saffron supplementation can improve symptoms of depression in adults with depression.",
+      "Sources": ["Akhondzadeh Basti A, Moshiri E, Noorbala AA, et. al. Comparison of petal of Crocus sativus L. and fluoxetine in the treatment of depressed outpatients: a pilot double-blind randomised trial. Prog Neuropsychopharmacol Biol Psychiatry 2007;31(2):439-42.",
+        "Moshiri E, Basti AA, Noorbala AA, et. al. Crocus sativus L. (petal) in the treatment of mild-to-moderate depression: a double-blind, randomized and placebo-controlled trial. Phytomedicine 2006;13(9-10):607-11.",
+        "Akhondzadeh S, Tahmacebi-Pour N, Noorbala AA, et. al. Crocus sativus L. in the treatment of mild to moderate depression: a double-blind, randomized and placebo-controlled trial. Phytoth Res 2005;19(2):148-51.",
+        "Akhondzadeh S, Fallah-Pour H, Afkham K, et. al. Comparison of Crocus sativus L. and imipramine in the treatment of mild to moderate depression: a pilot double-blind randomized trial. ISRCTN45683816. BMC Complement Altern Med 2004;4:12"]
+        }
+      ,
+        {"name": "Yoga",
+          "index": 18,
+          "Description": "Yoga is a physical, mental, and spiritual practice or discipline which originated in India. Yoga can reduce the impact of exaggerated stress responses and may be helpful for both anxiety and depression. Further controlled trials of yoga practice have demonstrated improvements in mood and quality of life for the elderly, people caring for patients with dementia, breast cancer survivors, and patients with epilepsy.",
+          "Sources": ["Pilkington K, Kirkwood G, Rampes H, et. al. Yoga for depression: the research evidence. J Affect Disord 2005;89(1-3):13-24.",
+            "Naga Venkatesha Murthy PJ, Janakiramaiah N, et. al. P300 amplitude and antidepressant response to Sudarshan Kriya Yoga (SKY). J Affect Disord 1998;50(1):45-8.",
+            "Janakiramaiah N, Gangadhar BN, Naga Venkatesha Murthy PJ, et. al. Antidepressant efficacy of Sudarshan Kriya Yoga (SKY) in melancholia: a randomised comparison with electroconvulsive therapy (ECT) and imipramine. J Affect Disord 2000;57(1-3):255-9.",
+            "Gangadhar BN, Naveen GH, Rao MG, et. al. Positive antidepressant effects of generic yoga in depressive out-patients: A comparative study. Indian J Psychiatry 2013;55(Suppl 3):S369-73. doi: 10.4103/0019-5545.116312.",
+            "Thirthalli J, Naveen GH, Rao MG, et. al. Cortisol and antidepressant effects of yoga. Indian J Psychiatry 2013;55(Suppl 3):S405-8. doi: 10.4103/0019-5545.116315. ",
+            "Naveen GH, Thirthalli J, Rao MG, et. al. Positive therapeutic and neurotropic effects of yoga in depression: A comparative study. Indian J Psychiatry 2013;55(Suppl 3):S400-4. doi: 10.4103/0019-5545.116313"]
+        }
+      ,
+        {"name": "Tryptophan",
+          "index": 19,
+          "Description": "Tryptophan is the precursor of serotonin, the “mood” chemical. Lowering tryptophan levels triggers a corresponding drop in brain serotonin production and can impact mood, impair memory, and increase aggression. Supplementing with tryptophan helps normalize levels of serotonin and other neurotransmitters. A daily dose of 6,000 mg of L-tryptophan significantly decreased mood swings, tension, and irritability.",
+          "Sources": ["Miura H, Ozaki N, Sawada M, et. al. A link between stress and depression: shifts in the balance between the kynurenine and serotonin pathways of tryptophan metabolism and the etiology and pathophysiology of depression. Stress 2008;11(3):198-209.",
+            "Cournoyer G, de Montigny C, Ouellette J, et. al. A comparative double-blind controlled study of trimipramine and amitriptyline in major depression: lack of correlation with 5-hydroxytryptamine reuptake blockade. J Clin Psychopharmacol 1987;7(6):385-93.",
+            "Kahn RS, Westenberg HG, Verhoeven WM, et. al. Effect of a serotonin precursor and uptake inhibitor in anxiety disorders; a double-blind comparison of 5-hydroxytryptophan, clomipramine and placebo. Int Clin Psychopharmacol 1987;2(1):33-45.",
+            "Smith KA, Fairburn CG, Cowen PJ. Relapse of depression after rapid depletion of tryptophan. Lancet 1997;349(9056):915-9."]
+        }
+      ,
+        {"name": "Religion and Spiritual Health",
+          "index": 20,
+          "Description": "A number of heavy-hitting psychiatry journals have published articles about a lower risk of depression in people who are religious or spiritual.",
+          "Sources": ["Koenig HG, George LK, Peterson BL. Religiosity and remission of depression in medically ill older patients. Am J Psychiatry 1998;155(4):536-42.",
+            "Kendler KS, Liu XQ, Gardner CO, et. al. Dimensions of religiosity and their relationship to lifetime psychiatric and substance use disorders. Am J Psychiatry 2003;160(3):496-503",
+            "Hassed CS. Depression: dispirited or spiritually deprived? MJA 2000;173(10):545-7.",
+            "McClain CS, Rosenfeld B, Breitbart W. Effect of spiritual wellbeing on end-of-life despair in terminally-ill cancer patients. Lancet 2003;361(9369):1603-7."]
+        }
+      ,
+        {"name": "Bibliotherapy",
+          "index": 21,
+          "Description": "Reading books, or bibliotherapy, has been shown to improve mood. This concept was originally supported by author Alain De Botton at his London company, The School of Life.",
+          "Sources": [""]
+        }
+      ,
+        {"name": "Ginkgo Biloba",
+          "index": 22,
+          "Description": "Ginkgo biloba is the oldest living tree species. Through the release of antioxidants, ginkgo may help: Improve thinking, learning, and memory (cognitive function), have an easier time performing daily activities, improve social behavior, and have fewer feelings of depression.",
+          "Sources": [""]
+        }
+      ,
+        {"name": "Music Therapy",
+          "index": 23,
+          "Description": "Evidence has shown that listening to music regularly can address people’s physical, emotional, cognitive, and social needs by either creating, singing, moving to, and/or listening to music. A recent study conducted at Queen’s University Belfast has revealed that music therapy can effectively treat depression in children and adolescents dealing with emotional, developmental, and behavioral problems.",
+          "Sources": ["Maratos AS, Gold C, Wang X, et. al. Music therapy for depression. Cochrane Database Syst Rev 2008;(1):CD004517."]
+        }
+      ,
+        {"name": "Relaxation Therapy",
+          "index": 24,
+          "Description": "One widespread relaxation technique is called progressive muscle relaxation, also known as Jacobson’s progressive muscle relaxation or deep muscle relaxation. In this technique you lie down and focus on a particular group of muscles – first consciously relaxing them, then tensing them for a while, and then completely relaxing them again. This procedure is repeated in different muscle groups, until your entire body is relaxed. The aim is to reach a deep state of relaxation and improve your awareness of your own body and the muscle groups that you tense.",
+          "Sources": ["Jorm AF, Morgan AJ, Hetrick SE. Relaxation for depression. Cochrane Database of Systematic Reviews 2008, Issue 4. Art. No.: CD007142. doi: 10.1002/14651858.CD007142.pub2."]
+        }
+      ]
+    }
