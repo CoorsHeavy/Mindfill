@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +21,10 @@ import android.widget.Toast;
 
 import com.hudson.mindfill.adapters.GridAdapter;
 import com.hudson.mindfill.lib.helper;
+import com.mixpanel.android.mpmetrics.MixpanelAPI;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,6 +49,16 @@ public class Tiles extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         context = this;
+
+        String projectToken = "ccdffb08bd13a2bebb50535fbd56963e";
+        MixpanelAPI mixpanel = MixpanelAPI.getInstance(this, projectToken);
+        try {
+            JSONObject props = new JSONObject();
+            props.put("Tiles Started", true);
+            mixpanel.track("Tiles - onCreate called", props);
+        } catch (JSONException e) {
+            Log.e("MYAPP", "Unable to add properties to JSONObject", e);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -135,9 +150,10 @@ public class Tiles extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_settings) {
-            // Handle the camera action
-        } else if (id == R.id.nav_edit) {
+//        if (id == R.id.nav_settings) {
+//            // Handle the camera action
+//        } else
+        if (id == R.id.nav_edit) {
             startActivity(new Intent(getApplicationContext(), DragDrop.class));
         } else if (id == R.id.nav_quiz) {
             startActivity(new Intent(getApplicationContext(), Quiz.class));
@@ -145,9 +161,10 @@ public class Tiles extends AppCompatActivity
 
         } else if (id == R.id.nav_chart) {
             startActivity(new Intent(getApplicationContext(), Chart.class));
-        } else if (id == R.id.nav_share) {
-
         }
+//      else if (id == R.id.nav_share) {
+//
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

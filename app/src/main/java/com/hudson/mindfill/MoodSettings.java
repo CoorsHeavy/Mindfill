@@ -14,6 +14,7 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Hudson Hughes on 6/19/2016.
@@ -97,7 +98,7 @@ public class MoodSettings {
         prefsEditor.commit();
     }
 
-    public HashMap<Date, Integer> getMapDate(HashMap<Date, Integer> map){
+    public HashMap<Date, Integer> getMapDate(){
         HashMap<Long, Integer> original;
         SharedPreferences mPrefs = context.getSharedPreferences("mindfull", Context.MODE_PRIVATE);
         if (!mPrefs.contains("MoodMap")) original = new HashMap<Long, Integer>();
@@ -124,7 +125,7 @@ public class MoodSettings {
         return fresh;
     }
 
-    public HashMap<Date, Integer> getMapLong(HashMap<Date, Integer> map){
+    public HashMap<Date, Integer> getMapLong(){
         HashMap<Long, Integer> original;
         SharedPreferences mPrefs = context.getSharedPreferences("mindfull", Context.MODE_PRIVATE);
         if (!mPrefs.contains("MoodMap")) original = new HashMap<Long, Integer>();
@@ -151,7 +152,34 @@ public class MoodSettings {
         return fresh;
     }
 
-    public long getStartLong(HashMap<Date, Integer> map){
+    public HashMap<Integer, Integer> getMapInt(){
+        HashMap<Long, Integer> original;
+        SharedPreferences mPrefs = context.getSharedPreferences("mindfull", Context.MODE_PRIVATE);
+        if (!mPrefs.contains("MoodMap")) original = new HashMap<Long, Integer>();
+        String json = mPrefs.getString("MoodMap", "");
+        Gson gson = new Gson();
+        try {
+            Log.d("Hudson", json);
+            Type stringMap = new TypeToken<HashMap<Long, Integer>>(){}.getType();
+            HashMap<Long, Integer> object = gson.fromJson(json, stringMap);
+            original = object;
+        }catch (Exception e){
+            e.printStackTrace();
+            original = new HashMap<Long, Integer>();
+        }
+
+        HashMap<Integer, Integer> fresh = new HashMap<Integer, Integer>();
+        Iterator it = original.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            System.out.println(pair.getKey() + " = " + pair.getValue());
+            it.remove(); // avoids a ConcurrentModificationException
+            fresh.put(difference(new Date((long) pair.getKey()), new Date(getStartLong())), (Integer) pair.getValue());
+        }
+        return fresh;
+    }
+
+    public long getStartLong(){
         HashMap<Long, Integer> original;
         SharedPreferences mPrefs = context.getSharedPreferences("mindfull", Context.MODE_PRIVATE);
         if (!mPrefs.contains("MoodMap")) original = new HashMap<Long, Integer>();
@@ -179,7 +207,7 @@ public class MoodSettings {
     }
 
     public String getStartString(HashMap<Date, Integer> map){
-        long day = getStartLong(map);
+        long day = getStartLong();
         Calendar cal = new GregorianCalendar();
         cal.setTime(new Date(day)); // Give your own date
         String date = cal.get(Calendar.MONTH) + " " + cal.get(Calendar.DAY_OF_MONTH) + ", " + cal.get(Calendar.YEAR);
@@ -200,4 +228,8 @@ public class MoodSettings {
         return date;
     }
 
+    public int difference(Date day1, Date day2) {
+
+        return (int) TimeUnit.DAYS.convert(Math.abs(day2.getTime() - day1.getTime()), TimeUnit.MILLISECONDS) + 1;
+    }
 }

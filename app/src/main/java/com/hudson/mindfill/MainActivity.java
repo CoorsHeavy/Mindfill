@@ -2,12 +2,18 @@ package com.hudson.mindfill;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+
+import com.mixpanel.android.mpmetrics.MixpanelAPI;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
 
@@ -41,6 +47,16 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                 startActivity(new Intent(getApplicationContext(), Dictionary.class));
             }
         });
+        String projectToken = "ccdffb08bd13a2bebb50535fbd56963e";
+        MixpanelAPI mixpanel = MixpanelAPI.getInstance(this, projectToken);
+        try {
+            JSONObject props = new JSONObject();
+            props.put("App Started", true);
+            mixpanel.track("MainActivity - onCreate called", props);
+        } catch (JSONException e) {
+            Log.e("MYAPP", "Unable to add properties to JSONObject", e);
+        }
+
     }
 
     @Override
