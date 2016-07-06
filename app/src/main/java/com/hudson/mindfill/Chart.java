@@ -15,8 +15,19 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
+
+class RecipeCompare implements Comparator<Entry> {
+
+    @Override
+    public int compare(Entry o1, Entry o2) {
+        // write comparison logic here like below , it's just a sample
+        return Integer.compare( o1.getXIndex(), o2.getXIndex() );
+    }
+}
 
 public class Chart extends AppCompatActivity {
 
@@ -37,7 +48,15 @@ public class Chart extends AppCompatActivity {
             if(max < (int) pair.getKey()) max = (int) pair.getKey();
             valsComp1.add(new Entry((int) pair.getValue(), (int) pair.getKey()));
         }
+        Collections.sort(valsComp1, new RecipeCompare());
+        {
+            Iterator iI = valsComp1.iterator();
+            while (iI.hasNext()) {
+                Entry pair = (Entry) iI.next();
+                System.out.println(pair.getXIndex() + " = " + pair.getVal());
 
+            }
+        }
         ArrayList<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
         LineDataSet setComp1 = new LineDataSet(valsComp1, "");
         dataSets.add(setComp1);

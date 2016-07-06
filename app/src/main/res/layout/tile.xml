@@ -38,7 +38,7 @@
                 android:src="@drawable/check" />
         </RelativeLayout>
     <LinearLayout android:layout_width="match_parent" android:visibility="gone"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" android:rotationY="180"
         android:orientation="vertical" android:id="@+id/back">
         <Button android:background="@drawable/menuround" android:id="@+id/infoButon" android:text="Info" android:layout_weight="1" android:layout_width="match_parent"
             android:layout_height="match_parent"

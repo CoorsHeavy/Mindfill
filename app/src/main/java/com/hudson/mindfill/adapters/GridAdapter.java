@@ -1,5 +1,7 @@
 package com.hudson.mindfill.adapters;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -78,7 +80,7 @@ public class GridAdapter extends BaseAdapter{
             grid = new View(mContext);
             grid = inflater.inflate(R.layout.tile, null);
             TextView textView = (TextView) grid.findViewById(R.id.button_text);
-            RelativeLayout ll = (RelativeLayout) grid.findViewById(R.id.srl);
+            final RelativeLayout ll = (RelativeLayout) grid.findViewById(R.id.srl);
             ImageView img = (ImageView) grid.findViewById(R.id.img);
             final ImageView check = (ImageView) grid.findViewById(R.id.check);
             final RelativeLayout front = (RelativeLayout) grid.findViewById(R.id.front);
@@ -102,6 +104,11 @@ public class GridAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 helper.launchSearch(mContext, myList.get(position));
+                //v.animate().rotationYBy()
+//                ObjectAnimator anim = (ObjectAnimator) AnimatorInflater.loadAnimator(mContext, R.animator.flipping);
+//                anim.setTarget(v);
+//                anim.setDuration(3000);
+//                anim.start();
             }});
 
             info.setOnClickListener(new View.OnClickListener() {
@@ -122,15 +129,48 @@ public class GridAdapter extends BaseAdapter{
             backButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    front.setVisibility(View.VISIBLE);
-                    back.setVisibility(View.GONE);
+                    ll.animate()
+                            .rotationYBy(90)
+                            .setDuration(300)
+                            .setListener(new AnimatorListenerAdapter() {
+                                @Override
+                                public void onAnimationEnd(Animator animation) {
+                                    front.setVisibility(View.VISIBLE);
+                                    ll.animate()
+                                            .rotationYBy(90)
+                                            .setDuration(300)
+                                            .setListener(new AnimatorListenerAdapter() {
+                                                @Override
+                                                public void onAnimationEnd(Animator animation) {
+                                                    back.setVisibility(View.GONE);
+                                                }
+                                            });
+                                }
+                            });
                 }
             });
             front.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    front.setVisibility(View.GONE);
-                    back.setVisibility(View.VISIBLE);
+                    ll.animate()
+                            .rotationYBy(90)
+                            .setDuration(300)
+                            .setListener(new AnimatorListenerAdapter() {
+                                @Override
+                                public void onAnimationEnd(Animator animation) {
+                                    front.setVisibility(View.GONE);
+                                    ll.animate()
+                                            .rotationYBy(90)
+                                            .setDuration(300)
+                                            .setListener(new AnimatorListenerAdapter() {
+                                                @Override
+                                                public void onAnimationEnd(Animator animation) {
+                                                    back.setVisibility(View.VISIBLE);
+                                                }
+                                            });
+                                }
+                            });
+
                 }
             });
             front.setOnLongClickListener(new View.OnLongClickListener() {
