@@ -76,7 +76,8 @@
                 android:layout_height="wrap_content"
                 android:text="Submit Mood"
                 android:id="@+id/submitButton"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/greenbutton" />
 
             <LinearLayout
                 android:orientation="horizontal"
