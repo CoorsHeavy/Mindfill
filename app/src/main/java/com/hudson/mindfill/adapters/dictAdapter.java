@@ -1,5 +1,7 @@
 package com.hudson.mindfill.adapters;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -29,7 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hudson.mindfill.R;
-import com.hudson.mindfill.lib.helper;
+import com.hudson.mindfill.lib.StaticClass;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -59,9 +61,9 @@ public class dictAdapter extends BaseAdapter implements
 
     public dictAdapter(Context c) {
         mContext = c;
-        this.myList = helper.getArrayIntList(c);
+        this.myList = StaticClass.getIntstnace().getArrayIntList();
         for(int a: myList){
-            Log.d("Hudson", String.valueOf(a) + " " + helper.getTreatmentName(c, a));
+            Log.d("Hudson", String.valueOf(a) + " " + StaticClass.getIntstnace().getTreatmentName(a));
         }
     }
 
@@ -91,11 +93,12 @@ public class dictAdapter extends BaseAdapter implements
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         Log.d("Hudson", "preGetView " + String.valueOf(position));
 
+
             Log.d("Hudson", "getView " + String.valueOf(position));
             grid = new View(mContext);
             grid = inflater.inflate(R.layout.tiledict, null);
+            final RelativeLayout ll = (RelativeLayout) grid.findViewById(R.id.srl);
             TextView textView = (TextView) grid.findViewById(R.id.button_text);
-            RelativeLayout ll = (RelativeLayout) grid.findViewById(R.id.srl);
             ImageView img = (ImageView) grid.findViewById(R.id.img);
             final RelativeLayout front = (RelativeLayout) grid.findViewById(R.id.front);
             final LinearLayout back = (LinearLayout) grid.findViewById(R.id.back);
@@ -110,39 +113,73 @@ public class dictAdapter extends BaseAdapter implements
             yelp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    helper.launchSearch(mContext, myList.get(position));
+
+                    StaticClass.getIntstnace().launchSearch(mContext, myList.get(position));
                 }
             });
 
             info.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    helper.launchDialog(mContext, myList.get(position));
+                    StaticClass.getIntstnace().launchDialog(mContext, myList.get(position));
                 }
             });
             web.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String query = helper.getTreatmentName(mContext, myList.get(position));
+                    String query = StaticClass.getIntstnace().getTreatmentName(myList.get(position));
                     Uri uri = Uri.parse("http://www.google.com/#q=" + query);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     mContext.startActivity(intent);
                 }
             });
-            backButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    front.setVisibility(View.VISIBLE);
-                    back.setVisibility(View.GONE);
-                }
-            });
-            front.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    front.setVisibility(View.GONE);
-                    back.setVisibility(View.VISIBLE);
-                }
-            });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll.animate()
+                        .rotationYBy(90)
+                        .setDuration(300)
+                        .setListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                front.setVisibility(View.VISIBLE);
+                                ll.animate()
+                                        .rotationYBy(90)
+                                        .setDuration(300)
+                                        .setListener(new AnimatorListenerAdapter() {
+                                            @Override
+                                            public void onAnimationEnd(Animator animation) {
+                                                back.setVisibility(View.GONE);
+                                            }
+                                        });
+                            }
+                        });
+            }
+        });
+        front.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll.animate()
+                        .rotationYBy(90)
+                        .setDuration(300)
+                        .setListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                front.setVisibility(View.GONE);
+                                ll.animate()
+                                        .rotationYBy(90)
+                                        .setDuration(300)
+                                        .setListener(new AnimatorListenerAdapter() {
+                                            @Override
+                                            public void onAnimationEnd(Animator animation) {
+                                                back.setVisibility(View.VISIBLE);
+                                            }
+                                        });
+                            }
+                        });
+
+            }
+        });
             front.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
@@ -153,10 +190,10 @@ public class dictAdapter extends BaseAdapter implements
 
 
             ll.setBackgroundResource(R.drawable.roundtile);
-            textView.setText(helper.getTreatmentName(mContext, myList.get(position)));
+            textView.setText(StaticClass.getIntstnace().getTreatmentName(myList.get(position)));
 
 
-            Log.d("Hudson", helper.getTreatmentName(mContext, myList.get(position)));
+            Log.d("Hudson", StaticClass.getIntstnace().getTreatmentName(myList.get(position)));
 
         return grid;
     }

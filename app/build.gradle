@@ -8,8 +8,8 @@ android {
         applicationId "com.hudson.mindfill"
         minSdkVersion 22
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.01"
     }
     buildTypes {
         release {
@@ -30,6 +30,7 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    compile 'com.orhanobut:logger:1.15'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.easing:library:1.0.1@aar'

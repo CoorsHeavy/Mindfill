@@ -81,7 +81,7 @@ public class Quiz extends AppCompatActivity {
         ButterKnife.bind(this);
         dialog = new AlertDialog.Builder(context)
                 .setTitle("Welcome to Mindfull")
-                .setMessage("Insert Welcome Text")
+                .setMessage("MindFull will generate a personal list of treatments for you based on the following quiz. Don't worry about mistakes you can always change your answers.")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // continue with delete

@@ -14,16 +14,16 @@ public class InfoDialog extends Dialog {
     public InfoDialog(final Context context, int index) {
         super(context);
 
-        setTitle(helper.getTreatmentName(context, index));
+        setTitle(StaticClass.getIntstnace().getTreatmentName(index));
         setContentView(R.layout.dialoglayout);
         TabHost tabHost = (TabHost) findViewById(R.id.TabHost01);
         TextView describe = (TextView) findViewById(R.id.TextView01);
-        describe.setText(helper.getTreatmentDescription(context, index));
+        describe.setText(StaticClass.getIntstnace().getTreatmentDescription(index));
         ListView listView = (ListView) findViewById(R.id.TextView02);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 context,
                 android.R.layout.simple_list_item_1,
-                helper.getTreatmentEvidence(context, index));
+                StaticClass.getIntstnace().getTreatmentEvidence(index));
         listView.setAdapter(arrayAdapter);
         tabHost.setup();
         // create tab 1

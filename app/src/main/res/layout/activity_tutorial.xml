@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to Mindfull, your personal mental health training app. Mindfull helps it users discover, research, and schedule activities designed to improve their mental health. Start off by designing a regimine based on our a collection of dietary supplements and activities."
+        android:text="Welcome to Mindfull, your personal mental health training app. Mindfull helps it users discover, research, and schedule treatments designed to improve their mental health. Start off by designing a regimine based on our a collection of dietary supplements and treatments."
         android:id="@+id/textView6"
         android:layout_below="@+id/textView5"
         android:layout_above="@+id/button2"

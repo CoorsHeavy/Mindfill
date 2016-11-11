@@ -17,7 +17,7 @@ import android.widget.ListView;
 import com.hudson.mindfill.adapters.ListAdapter;
 import com.hudson.mindfill.adapters.MyListAdapter;
 import com.hudson.mindfill.adapters.TheListAdapter;
-import com.hudson.mindfill.lib.helper;
+import com.hudson.mindfill.lib.StaticClass;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -76,8 +76,8 @@ public class DragDrop extends AppCompatActivity {
         hs.addAll(theList);
         theList.clear();
         theList.addAll(hs);
-        myList = helper.getList(DragDrop.this);
-        stockList = helper.getArrayIntList(context);
+        myList = StaticClass.getIntstnace().getList();
+        stockList = StaticClass.getIntstnace().getArrayIntList();
         checkBox = (CheckBox) findViewById(R.id.checkBox);
         button = (Button) findViewById(R.id.button);
         back = (Button) findViewById(R.id.back);
@@ -124,14 +124,14 @@ public class DragDrop extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 int index = myList.get(position);
-                helper.launchDialog(context, index);
+                StaticClass.getIntstnace().launchDialog(context, index);
                 return true;
             }
         });
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                helper.launchDialog(context, position);
+                StaticClass.getIntstnace().launchDialog(context, position);
                 return true;
             }
         });

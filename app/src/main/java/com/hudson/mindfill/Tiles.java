@@ -1,12 +1,16 @@
 package com.hudson.mindfill;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -20,7 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hudson.mindfill.adapters.GridAdapter;
-import com.hudson.mindfill.lib.helper;
+import com.hudson.mindfill.lib.StaticClass;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
 import org.json.JSONException;
@@ -29,8 +33,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Tiles extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Tiles extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     Context context;
     Button submitButton;
@@ -51,11 +54,11 @@ public class Tiles extends AppCompatActivity
         context = this;
 
         String projectToken = "ccdffb08bd13a2bebb50535fbd56963e";
-        MixpanelAPI mixpanel = MixpanelAPI.getInstance(this, projectToken);
+        //MixpanelAPI mixpanel = MixpanelAPI.getInstance(this, projectToken);
         try {
             JSONObject props = new JSONObject();
             props.put("Tiles Started", true);
-            mixpanel.track("Tiles - onCreate called", props);
+            //mixpanel.track("Tiles - onCreate called", props);
         } catch (JSONException e) {
             Log.e("MYAPP", "Unable to add properties to JSONObject", e);
         }
@@ -77,14 +80,14 @@ public class Tiles extends AppCompatActivity
         submitButton = (Button) findViewById(R.id.submitButton);
         seekBar.setMax(100);
         seekBar.setProgress(50);
-        if( new MoodSettings(context).retrieve(new Date()) != -1 ){
-            seekBar.setProgress(new MoodSettings(context).retrieve(new Date()));
+        if( StaticClass.getIntstnace().retrieve(new Date()) != -1 ){
+            seekBar.setProgress(StaticClass.getIntstnace().retrieve(new Date()));
         }
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         percentage.setText("Current Mood: " + seekBar.getProgress() + "%");
         gridView = (GridView) findViewById(R.id.gridView);
-        myList = helper.getList(this);
+        myList = StaticClass.getIntstnace().getList();
         gridAdapter = new GridAdapter(this, myList);
         gridView.setAdapter(gridAdapter);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -106,8 +109,8 @@ public class Tiles extends AppCompatActivity
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new MoodSettings(context).place(seekBar.getProgress(), new Date());
-                Toast.makeText(context, "Mood Submitted as " + String.valueOf(new MoodSettings(context).retrieve(new Date())) + "%", Toast.LENGTH_SHORT).show();
+                StaticClass.getIntstnace().place(seekBar.getProgress(), new Date());
+                Toast.makeText(context, "Mood Submitted as " + String.valueOf(StaticClass.getIntstnace().retrieve(new Date())) + "%", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -161,6 +164,27 @@ public class Tiles extends AppCompatActivity
 
         } else if (id == R.id.nav_chart) {
             startActivity(new Intent(getApplicationContext(), Chart.class));
+        } else if (id == R.id.nav_custom) {
+            startActivity(new Intent(getApplicationContext(), CustomActivity.class));
+        } else if (id == R.id.nav_suicide) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(Tiles.this);
+            builder.setTitle("Mental Emergency")
+                    .setItems(new String[]{"Call Suicide Hotline", "Call a friend"}, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch(which){
+                                case 0:
+                                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                                    intent.setData(Uri.parse("tel:" + "18002738255"));
+                                    startActivity(intent);
+                                    break;
+                                case 1:
+
+                                    break;
+                            }
+                        }
+                    });
+            builder.create().show();
+
         }
 //      else if (id == R.id.nav_share) {
 //

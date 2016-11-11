@@ -33,7 +33,7 @@
                 android:id="@+id/imageView"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:src="@mipmap/mindfull"
+                android:src="@drawable/title"
                 android:paddingBottom="4dp" />
 
 
@@ -47,7 +47,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:paddingBottom="2dp">
 
                 <Button
                     android:background="@drawable/titlebutton"
@@ -78,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Mental Health Info"
+                    android:text="Encyclopedia"
                     android:id="@+id/bottom"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"

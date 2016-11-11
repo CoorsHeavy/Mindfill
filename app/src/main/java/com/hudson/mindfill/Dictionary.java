@@ -38,7 +38,7 @@ public class Dictionary extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_help:
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Dictionary.this);
-                alertDialogBuilder.setMessage("Here you can view and research your activities. Tap a tile to flip it for more information.");
+                alertDialogBuilder.setMessage("Here you can view and research your treatments. Tap a tile to flip it for more information.");
                 alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
