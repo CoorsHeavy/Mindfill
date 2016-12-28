@@ -22,7 +22,7 @@ public class InfoDialog extends Dialog {
         ListView listView = (ListView) findViewById(R.id.TextView02);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 context,
-                android.R.layout.simple_list_item_1,
+                R.layout.list_bullet_point,
                 StaticClass.getIntstnace().getTreatmentEvidence(index));
         listView.setAdapter(arrayAdapter);
         tabHost.setup();
