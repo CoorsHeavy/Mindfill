@@ -3,8 +3,10 @@ package com.hudson.mindfill;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +25,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hudson.mindfill.activities.StoreActivity;
 import com.hudson.mindfill.adapters.GridAdapter;
 import com.hudson.mindfill.lib.StaticClass;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
@@ -43,6 +46,8 @@ public class Tiles extends AppCompatActivity implements NavigationView.OnNavigat
     TextView leftText;
     SeekBar seekBar;
     ArrayList<Integer> myList = new ArrayList<Integer>();
+
+    private static final int PICK_CONTACT = 35;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,20 +183,55 @@ public class Tiles extends AppCompatActivity implements NavigationView.OnNavigat
                                     startActivity(intent);
                                     break;
                                 case 1:
-
+                                    Intent contactsIntent= new Intent(Intent.ACTION_PICK);
+                                    contactsIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
+                                    startActivityForResult(contactsIntent, PICK_CONTACT);
                                     break;
                             }
                         }
                     });
             builder.create().show();
 
+        } else if (id == R.id.nav_store) {
+            startActivity(new Intent(getApplicationContext(), StoreActivity.class));
         }
-//      else if (id == R.id.nav_share) {
-//
-//        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            if (requestCode == PICK_CONTACT) {
+                if (data != null) {
+                    Uri uri = data.getData();
+
+                    if (uri != null) {
+                        Cursor c = null;
+                        try {
+                            c = getContentResolver().query(uri, new String[]{
+                                            ContactsContract.CommonDataKinds.Phone.NUMBER,
+                                            ContactsContract.CommonDataKinds.Phone.TYPE },
+                                    null, null, null);
+
+                            if (c != null && c.moveToFirst()) {
+                                String number = c.getString(0);
+
+                                Intent intent = new Intent(Intent.ACTION_DIAL);
+                                intent.setData(Uri.parse("tel:" + number));
+                                startActivity(intent);
+                            }
+                        } finally {
+                            if (c != null) {
+                                c.close();
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

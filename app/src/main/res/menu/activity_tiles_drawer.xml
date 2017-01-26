@@ -25,9 +25,9 @@
             android:title="Edit Your Own Tiles"
             app:itemBackground="@drawable/red"
             app:showAsAction="never"/>
-        <!--<item-->
-            <!--android:id="@+id/nav_share"-->
-            <!--android:title="Share Your Calander" />-->
+        <item
+            android:id="@+id/nav_store"
+            android:title="Mindfull Store" />
     </group>
 
 </menu>

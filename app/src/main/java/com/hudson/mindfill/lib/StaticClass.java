@@ -46,7 +46,6 @@ import java.util.concurrent.TimeUnit;
  * Created by hudsonhughes on 8/18/16.
  */
 public class StaticClass {
-    private static StaticClass helper;
     private static StaticClass mapSettings = null;
     private Moshi moshi;
 
@@ -376,6 +375,8 @@ public class StaticClass {
     public HashSet<String> getStringsForDay(int i) {
         HashSet<Integer> set = deserializeSet(getMap().get(intToLong(i)));
         HashSet<String> setString = new HashSet<>();
+        if (set == null) return setString;
+
         for (Integer u : set) {
             setString.add(getTreatmentName(u));
         }
@@ -679,7 +680,7 @@ public class StaticClass {
                                 if (location.length() == 0) {
                                     location = "San Francisco";
                                 }
-                                String query = helper.getTreatmentName(integer);
+                                String query = getTreatmentName(integer);
                                 Uri uri = Uri.parse("http://www.yelp.com/search?find_desc=" + query + "&find_loc=" + location);
                                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                 mContext.startActivity(intent);
@@ -757,7 +758,7 @@ public class StaticClass {
                                 if (location.length() == 0) {
                                     location = "San Francisco";
                                 }
-                                String query = helper.getTreatmentName(integer);
+                                String query = getTreatmentName(integer);
                                 Uri uri = Uri.parse("http://www.yelp.com/search?find_desc=" + query + "&find_loc=" + location);
                                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                 mContext.startActivity(intent);
